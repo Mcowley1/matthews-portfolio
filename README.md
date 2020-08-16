@@ -19,4 +19,4 @@ A look into working projects from Matthew Cowley. With information on who Matthe
 ## Links
 [Matthew's-Portfolio](https://mcowley1.github.io/matthews-portfolio/)
 
-![Portfolio-img](images/matthews-portfolio.png)
+![Portfolio-img](matthews-portfolio.png)
