@@ -25,7 +25,7 @@ header h1 {
     display: flex;
     justify-content: flex-start;
     align-items: ;
-    font-size: 40px;
+    font-size: 38px;
     color: var(--secondary-color);
     padding: 5px 1% 5px 6%;
     background-color: var(--primary-color);
@@ -137,6 +137,9 @@ p {
     justify-content: space-between;
     font-size: 20px;
     font-weight: bold;
+    border: 3px solid var(--secondary-color);
+    border-radius: 3px;
+    opacity: 0.7;
 }
 
 /* css grid starts */
@@ -153,6 +156,7 @@ p {
     width: 1fr;
     height: 1fr;
     border: 6px solid var(--secondary-color);
+    border-radius: 7px;
     color: var(--secondary-color);
     display: flex;
     flex-direction: column;
@@ -167,6 +171,11 @@ p {
     border: 1px solid black;
     border-radius: 3px;
     opacity: 0.7;
+    margin-left: 9px;
+}
+
+.project-grid-item h3:hover {
+    background-color: rgba(180, 180, 180, 1.2);
 }
 
 .project-grid-item.run-buddy {
@@ -205,46 +214,71 @@ p {
 }
 
 /* media Query's */
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1024px) {
     header {
         padding-bottom: 0;
         justify-content: center;
+        align-items: center;
     }
-
     header h1 {
         width: 100%;
         text-align: center;
     }
-
     header nav {
         margin-top: 20px;
         width: 100%;
         justify-content: center;
     }
-
-    header nav a{
+    header nav a {
         font-size: 20px;
+        align-items: center;
+    }
+
+    .page-section {
+        justify-content: center;
     }
 
     .contact-spacing a {
         text-align: center;
+        justify-content: center;
     }
-
-}
-
-@media screen and (max-width: 768px) {
+  }
+  @media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+    }
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    header nav {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    header nav a {
+        font-size: 20px;
+    }
+    .contact-spacing a {
+        text-align: center;
+    }
+  }
+  @media screen and (max-width: 768px) {
     section {
         padding: 30px 15px;
     }
-
     h3 {
         flex: 1 100%;
         text-align: center;
     }
-}
-
-@media screen and (max-width: 575px) {
+  }
+  @media screen and (max-width: 575px) {
     section {
         width: 95%;
     }
-}
+  @media screen and (max-width: 320px) {
+      section {
+          width: 95%;
+    }
+  } 
