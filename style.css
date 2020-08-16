@@ -2,7 +2,7 @@
     --primary-color: gray;
     --secondary-color: lightblue;
     --third-color: black;
-}  
+} 
 
 body {
     background-color: var(--primary-color);
@@ -29,12 +29,20 @@ header h1 {
     color: var(--secondary-color);
     padding: 5px 1% 5px 6%;
     background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
 }
 
 header a {
     text-decoration: none;
     color: var(--secondary-color);
     font-size: 25px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 3px;
+}
+
+header a:hover {
+    background-color: rgba(180, 180, 180, 0.7);
 }
 
 nav {
@@ -49,13 +57,43 @@ nav a {
 }
 /* header ends */
 
+.subtitle h3 {
+    color: var(--primary-color);
+    text-shadow: 2px 2px rgba(180, 180, 180, 0.7);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    margin: 20px 60px;
+    padding: 1px 5px 1px 5px;
+    background-color: rgba(0, 25, 51, .35);
+    box-shadow: -7px -5px 5px grey;
+    border: 3px solid rgba(0, 25, 51, .35);
+}
+
 .section-subtitle {
-    background-image: url(code.png);
+    background-image: url(./images/code.png);
     height: 400px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.subtitle-container {
+    padding: 10px;
+    width: auto;
+    background-color: var(--primary-color);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.subtitle-container h2 {
+    margin: 0;
+
 }
 
 h2 {
@@ -99,6 +137,7 @@ p {
 }
 
 /* css grid starts */
+
 .project-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -107,61 +146,102 @@ p {
     height: 500px; 
 }
 
-
 .project-grid-item {
     width: 1fr;
     height: 1fr;
     border: 6px solid var(--secondary-color);
     color: var(--secondary-color);
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
     text-align: end;
     font-size: 17px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .project-grid-item h3 {
     background-color: gray;
-    
+    border: 1px solid black;
+    border-radius: 3px;
+    opacity: 0.7;
 }
 
 .project-grid-item.run-buddy {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
-    background-image: url(hero.jpg);
+    background-image: url(./images/hero.jpg);
     background-size: cover;
 }
 
 .project-grid-item.password-gen {
     grid-column: 1 / span 1;
     grid-row:  3 / span 1;
-    background-image: url(matrix.png);
+    background-image: url(./images/matrix.png);
     background-size: cover;
-    
 }
 
 .project-grid-item.brolys-plan {
     grid-column: 2/ span 1;
     grid-row: 3 / span 1;
-    background-image: url(broly.jpg);
+    background-image: url(./images/broly.jpg);
     background-size: cover;
 }
 
 .project-grid-item.enemy-battle-rounds {
     grid-column: 3 / span 1;
     grid-row: 1 / span 1;
-    background-image: url(battles.jpg);
+    background-image: url(./images/battles.jpg);
     background-size: cover;
 }
 
 .project-grid-item.the-throne {
     grid-column: 3 / span 1;
     grid-row: 2 / span 1;
-    background-image: url(Throne.jpg);
+    background-image: url(./images/Throne.jpg);
     background-size: cover;
 }
 
 /* media Query's */
- 
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav a{
+        font-size: 20px;
+    }
+
+    .contact-spacing a {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        padding: 30px 15px;
+    }
+
+    h3 {
+        flex: 1 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    section {
+        width: 95%;
+    }
+}

@@ -16,7 +16,7 @@ A look into working projects from Matthew Cowley. With information on who Matthe
 > 5. Broly's Plan 
 
 
-## Link
+## Links
 [Matthew's-Portfolio](https://mcowley1.github.io/matthews-portfolio/)
 
-![Portfolio-img]()
+![Portfolio-img](images/matthews-portfolio.png)
