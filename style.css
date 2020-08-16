@@ -8,6 +8,7 @@ body {
     background-color: var(--primary-color);
 } 
 
+/* header start */
 header {
     flex-direction: row;
     flex-wrap: wrap;
@@ -16,6 +17,8 @@ header {
     background: var(--third-color); 
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
 }
 
 header h1 {
@@ -34,10 +37,6 @@ header a {
     font-size: 25px;
 }
 
-header a:hover {
-    
-}
-
 nav {
     display: flex;
     flex-direction: row;
@@ -48,6 +47,7 @@ nav a {
     display: flex;
     padding: 5px 10px;
 }
+/* header ends */
 
 .section-subtitle {
     background-image: url(code.png);
@@ -72,8 +72,6 @@ p {
     border-color: lightblue;
     padding-left: 40px;
 }
-
-
 
 .page-wrapper {
     max-width: 88%;
@@ -106,7 +104,7 @@ p {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 10px;
-    height: 500px;
+    height: 500px; 
 }
 
 
@@ -119,9 +117,14 @@ p {
     align-items: center;
     justify-content: flex-start;
     text-align: end;
-    font-size: 20px;
+    font-size: 17px;
     display: flex;
     justify-content: space-between;
+}
+
+.project-grid-item h3 {
+    background-color: gray;
+    
 }
 
 .project-grid-item.run-buddy {
